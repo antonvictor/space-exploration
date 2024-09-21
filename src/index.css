@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* Entire Page Styling */
+
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  z-index: 1;
+  color: white;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.background-image {
+  position: absolute;
+  height: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  margin-left: 3rem;
+  height: 11vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding-right: 20vw;
+  background-color: rgba(51, 51, 65, 0.367);
+  height: 100%;
+  font: bold;
+}
+
+.navbar button {
+  color: white;
+}
+
+.navbar button:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 0.25rem;
+}
+
+/* Home Page Styling */
+
+.home-page {
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-paragraph {
+  height: 30vh;
+  width: 30vw;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+.home-paragraph h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#home-explore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 15vw;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  font-family: "Roboto Mono", monospace;
+  transform: translateY(50%) ;
+
+}
+
+#btn-background {
+  height: 60vh;
+  width: 30vw;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  transition: linear 1.5s;
+  
+}
+
+#btn-background:has(#home-explore:hover){
+  background-color: rgba(128, 128, 128, 0.182);
+
+}
+
+/* Destination Page Styling */
+
+#destination-head {
+  padding-left: 10vw;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+  font-size: 2rem;
+}
+
+.planet-img {
+  height: 50vh;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.planet-preview-panel {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.planet-list {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.8rem;
+  padding-bottom: 1vh;
+}
+
+.planet-list button {
+  font-size: 1.1rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.planet-description {
+  height: 10vh;
+  width: 25vw;
+}
+
+.planet-additional-info-box {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  gap: 1rem ;
+
+}
+
+.planet-additional-info-box> *{
+margin: 0;
+}
+
+
+.planet-additional-info {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem ;
+}
+
+.clicked {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 0.25rem;
+}
+
+.planet-list button:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 0.25rem;
+}
+
+/* Crew Page Styling */
+
+#crew-head {
+    padding-left: 10vw;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    font-size: 2rem;
+}
+
+.crew-member {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 3rem;
+}
+
+.member-title {
+  font-size: 2rem;
+  color: rgb(128, 128, 128);
+  padding: 0;
+  margin: 0;
+}
+
+.member-name {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.crew-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  height: 20vh;
+  width: 35vw;
+}
+
+
+
+.crew-img {
+  bottom: 0;
+  height: 50vh;
+  min-width: 22.5vw;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.dots {
+  position: absolute;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 2rem;
+  bottom: 10vh;
+  left: 20vw;
+}
+
+
+
+.dot button {
+  background-color: gray;
+  height: 1.2rem;
+  width: 1.2rem;
+  border: solid 1px black;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+
+.dot button:hover {
+    background-color: white;
+}
+
+.clicked-dot {
+  background-color: white;
+  height: 1.2rem;
+  width: 1.2rem;
+  border: solid 1px black;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+
+}
+
+
+/* Technology Page Styling */
+
+#technology-head {
+  padding-left: 10vw;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+  font-size: 2rem;
+}
+
+.technology-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+ 
+}
+
+.technology-dot button{
+  color: white;
+  background-color: transparent;
+  height: 10vh;
+  width: 5vw;
+  border-radius: 50%;
+  font-size: 2rem;
+  border: white solid;
+
+}
+
+.technology-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  
+}
+
+.technology-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  height: 20vh;
+  width: 35vw;
+}
+
+
+.technology-dot button:hover {
+  color: black;
+  background-color: white;
+
+}
+
+#technology-info-title {
+  font-size: 2rem;
+  color: rgb(128, 128, 128);
+  padding: 0;
+  margin: 0;
+}
+
+.technology-vehicle{
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.clicked-technology-dot button{
+  color: black;
+  background-color: white;
+  height: 10vh;
+  width: 5vw;
+  border-radius: 50%;
+  font-size: 2rem;
+}
